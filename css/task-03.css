@@ -1,0 +1,16 @@
+.list__img {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+.list:not(:last-child) {
+  margin-right: 15px;
+}
+
+.img {
+  width: 230px;
+}
