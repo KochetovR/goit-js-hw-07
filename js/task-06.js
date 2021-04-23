@@ -1,7 +1,8 @@
 const inputEl = document.querySelector('#validation-input')
-inputEl.addEventListener('change', par => {
-    const value = par.currentTarget.value.split('').length;
+inputEl.addEventListener('blur', par => {
+    const value = par.currentTarget.value.length;
     const dataValue = par.currentTarget.dataset.length;
+    
     
     // dataValue == value ?
     //     par.currentTarget.classList.add('valid') : par.currentTarget.classList.add('invalid');
@@ -12,5 +13,6 @@ inputEl.addEventListener('change', par => {
     }
     else {
         par.currentTarget.classList.add('invalid')
+        par.currentTarget.classList.remove('valid')
     }
 })
