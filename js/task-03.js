@@ -20,15 +20,12 @@ const listGallery = document.querySelector('#gallery')
 listGallery.classList.add('list__img')
 
 const addImgElemet = createImgElement(images);
+console.log(addImgElemet)
 listGallery.insertAdjacentHTML('beforeend', addImgElemet)
 
 function createImgElement(par) {
   return par.map(({ url, alt }) => {
-    return `
-<li class='list'>
-<img class='img' src=${url} alt="${alt}">
-</li>
-  `;
+    return `<li class='list'><img class='img' src=${url} alt="${alt}"></li>`;
   })
     .join('');
 }
